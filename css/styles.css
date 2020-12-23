@@ -60,9 +60,12 @@ li {
 /* Шапка сайта */
 
 .header {
+  border-bottom: 1px solid #ececec;
+}
+
+.navigation {
   display: flex;
   align-items: center;
-  border-bottom: ;
 }
 
 .logo {
@@ -132,15 +135,31 @@ li {
 }
 
 .contacts {
-  display: block;
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
-
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+}
+
+.icon-mail::before {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  content: "";
+  background-image: url("../images/mail.svg");
+}
+
+.icon-phone::before {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  content: "";
+  background-image: url("../images/smartphone.svg");
 }
 
 .contacts:hover,
@@ -166,7 +185,6 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-top: 1px solid #ececec;
 }
 
 .hero-content {
@@ -192,6 +210,7 @@ li {
   color: var(--white-color);
 
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .button {
@@ -338,8 +357,6 @@ li {
 }
 
 .employee-position {
-  margin-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -347,12 +364,58 @@ li {
   color: var(--text-color);
 }
 
+.employee-list.social {
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 32px 30px;
+}
+
+.employee-social {
+  display: inline-block;
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.employee-social.instagram {
+  background-image: url(../images/employee_instagram.svg);
+}
+
+.employee-social.twitter {
+  background-image: url(../images/employee_twitter.svg);
+}
+
+.employee-social.facebook {
+  background-image: url(../images/employee_facebook.svg);
+}
+
+.employee-social.linkedin {
+  background-image: url(../images/employee_linkedin.svg);
+}
+
+/* Постоянные клиенты */
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-title {
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Страница Портфолио */
 
 .projects {
   padding-top: 94px;
   padding-bottom: 94px;
-  border-top: 1px solid #ececec;
 }
 .category {
   display: flex;
@@ -380,6 +443,8 @@ li {
 .category-button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects-list {
@@ -399,6 +464,11 @@ li {
 
 .projects-items:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.projects-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-description {
@@ -441,6 +511,14 @@ footer {
   padding-bottom: 60px;
 }
 
+.footer {
+  display: flex;
+}
+
+.footer-contacts {
+  margin-right: 70px;
+}
+
 .logo.footer {
   display: block;
   margin-bottom: 20px;
@@ -473,4 +551,57 @@ address,
 
 .contacts-footer:last-child {
   margin-bottom: 0px;
+}
+
+.footer-social {
+  padding-top: 12px;
+}
+
+.social-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--white-color);
+}
+
+.social-list {
+  display: flex;
+}
+
+.social-items {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.social-items:hover,
+.social-items:focus {
+  background-color: var(--accent-color);
+}
+
+.social-items.instagram {
+  background-image: url(../images/instagram.svg);
+}
+
+.social-items.twitter {
+  background-image: url(../images/twitter.svg);
+}
+
+.social-items.facebook {
+  background-image: url(../images/facebook.svg);
+}
+
+.social-items.linkedin {
+  background-image: url(../images/linkedin.svg);
 }
