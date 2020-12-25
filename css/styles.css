@@ -208,6 +208,12 @@ li {
 
 .hero-content {
   text-align: center;
+  padding-top: 200px;
+}
+
+.title-container {
+  width: 696px;
+  margin: 0 auto;
 }
 
 .hero-title {
