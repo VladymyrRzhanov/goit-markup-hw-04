@@ -12,6 +12,7 @@
   --heading-color: #212121;
   --light-background-color: #f5f4fa;
   --dark-background-color: #2f303a;
+  --social-link-color: #afb1b8;
 }
 
 h1,
@@ -146,7 +147,25 @@ li {
   color: var(--text-color);
 }
 
-.icon-mail::before {
+.icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.contacts:hover,
+.contacts:focus {
+  color: var(--accent-color);
+}
+
+/* .icon-mail::before {
   width: 16px;
   height: 12px;
   margin-right: 10px;
@@ -160,7 +179,7 @@ li {
   margin-right: 10px;
   content: "";
   background-image: url("../images/smartphone.svg");
-}
+} */
 
 .contacts:hover,
 .contacts:focus {
@@ -248,31 +267,19 @@ li {
   margin-right: 0;
 }
 
-.benefits-item::before {
-  display: block;
-  content: "";
+.benefits-svg {
+  width: 270px;
   height: 120px;
   margin-bottom: 30px;
+
   background-color: var(--light-background-color);
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 4px;
 }
 
-.icon-antenna::before {
-  background-image: url("../images/antenna.svg");
-}
-
-.icon-clock::before {
-  background-image: url("../images/clock.svg");
-}
-
-.icon-diagram::before {
-  background-image: url("../images/diagram.svg");
-}
-
-.icon-astronaut::before {
-  background-image: url("../images/astronaut.svg");
+.benefits-icon {
+  width: 70px;
+  height: 70px;
+  margin: 25px 100px;
 }
 
 .benefits-title {
@@ -366,33 +373,30 @@ li {
 
 .employee-list.social {
   justify-content: space-around;
-  align-items: center;
-  padding: 16px 32px 30px;
+  margin: 16px 32px 30px;
 }
 
-.employee-social {
+.icon-staff {
   display: inline-block;
   padding: 12px;
   width: 44px;
   height: 44px;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: var(--social-link-color);
 }
 
-.employee-social.instagram {
-  background-image: url(../images/employee_instagram.svg);
+.employee-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
-.employee-social.twitter {
-  background-image: url(../images/employee_twitter.svg);
-}
-
-.employee-social.facebook {
-  background-image: url(../images/employee_facebook.svg);
-}
-
-.employee-social.linkedin {
-  background-image: url(../images/employee_linkedin.svg);
+.icon-staff:hover,
+.icon-staff:focus {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--white-color);
+  background-color: var(--accent-color);
 }
 
 /* Постоянные клиенты */
@@ -409,6 +413,59 @@ li {
 .clients-list {
   display: flex;
   justify-content: space-between;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--social-link-color);
+  border-radius: 4px;
+  color: var(--social-link-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.client-icono {
+  width: 44px;
+  height: 49px;
+  fill: currentColor;
+}
+
+.client-icont {
+  width: 40px;
+  height: 52px;
+  fill: currentColor;
+}
+
+.client-iconth {
+  width: 41px;
+  height: 43px;
+  fill: currentColor;
+}
+
+.client-iconf {
+  width: 80px;
+  height: 42px;
+  fill: currentColor;
+}
+
+.client-iconff {
+  width: 59px;
+  height: 47px;
+  fill: currentColor;
+}
+
+.client-iconsx {
+  width: 88px;
+  height: 45px;
+  fill: currentColor;
 }
 
 /* Страница Портфолио */
@@ -572,36 +629,30 @@ address,
   display: flex;
 }
 
-.social-items {
+.social-list > li {
+  margin-right: 10px;
+}
+
+.social-list > li:last-child {
+  margin-right: 0;
+}
+
+.social-link {
   display: inline-block;
   width: 44px;
   height: 44px;
-  margin-right: 10px;
-
+  fill: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 50%;
 }
 
-.social-items:hover,
-.social-items:focus {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
 }
 
-.social-items.instagram {
-  background-image: url(../images/instagram.svg);
-}
-
-.social-items.twitter {
-  background-image: url(../images/twitter.svg);
-}
-
-.social-items.facebook {
-  background-image: url(../images/facebook.svg);
-}
-
-.social-items.linkedin {
-  background-image: url(../images/linkedin.svg);
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 12px;
 }
